@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="../tokoq_design_system/responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#b8cf8c",
+                        "tertiary-fixed": "#dae9ac",
+                        "surface-bright": "#f8fbea",
+                        "primary-fixed-dim": "#b8cf8c",
+                        "primary-fixed": "#d3eba6",
+                        "on-surface": "#191d13",
+                        "inverse-on-surface": "#f0f2e2",
+                        "surface-tint": "#51652e",
+                        "outline": "#75786b",
+                        "background": "#f8fbea",
+                        "surface-variant": "#e1e4d4",
+                        "on-secondary-container": "#596841",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#bccd9e",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2e3227",
+                        "secondary": "#55633d",
+                        "surface-dim": "#d9dccb",
+                        "secondary-fixed": "#d8e9b9",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e1e4d4",
+                        "on-tertiary-fixed": "#161f00",
+                        "primary-container": "#576b33",
+                        "surface-container-high": "#e7ead9",
+                        "on-background": "#191d13",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f5e4",
+                        "tertiary": "#445122",
+                        "secondary-container": "#d5e6b6",
+                        "on-primary-container": "#d3eba5",
+                        "tertiary-container": "#5c6938",
+                        "on-secondary-fixed": "#131f02",
+                        "outline-variant": "#c5c8b9",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#131f00",
+                        "on-secondary-fixed-variant": "#3d4b28",
+                        "surface": "#f8fbea",
+                        "tertiary-fixed-dim": "#becd92",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#d9e8aa",
+                        "on-surface-variant": "#45483d",
+                        "surface-container": "#edefdf",
+                        "on-primary": "#ffffff",
+                        "primary": "#40521d",
+                        "on-primary-fixed-variant": "#3a4d18",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#3f4b1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding": "32px",
+                        "section-margin": "48px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "card-gap": "24px"
+                    },
+                    "fontSize": {
+                        "h2-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h1-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #CDD0C0; /* Level 0 Floor from Style Guidance */
+            font-family: sans-serif;
+        }
+        .matcha-shadow {
+            box-shadow: 0 10px 25px -5px rgba(73, 89, 42, 0.12);
+        }
+        .glass-paper {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="onboarding-shell min-h-screen flex flex-col items-center justify-center p-6 sm:p-container-padding">
+<!-- Onboarding Container -->
+<main class="onboarding-card w-full max-w-4xl glass-paper rounded-xl matcha-shadow border border-outline-variant overflow-hidden flex flex-col md:flex-row">
+<!-- Left Sidebar: Progress / Stepper -->
+<aside class="onboarding-sidebar w-full md:w-80 bg-inverse-surface p-8 text-on-primary-fixed flex flex-col gap-10">
+<div>
+<h1 class="font-h3 text-h3 text-primary-fixed mb-2">TokoQ</h1>
+<p class="font-body-sm text-body-sm text-surface-variant">Langkah awal digitalisasi UMKM Anda bersama AI.</p>
+</div>
+<!-- Vertical Stepper -->
+<nav class="onboarding-steps flex flex-col gap-8">
+<!-- Step 1 Done -->
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-sm shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim">LANGKAH 1</span>
+<span class="font-body-md text-body-md text-on-primary-fixed">Profil Toko</span>
+</div>
+</div>
+<!-- Step 2 Active -->
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full border-2 border-primary-fixed text-primary-fixed flex items-center justify-center font-bold text-sm shrink-0">
+                        2
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim">LANGKAH 2</span>
+<span class="font-body-md text-body-md text-on-primary-fixed">Inventori</span>
+</div>
+</div>
+<!-- Step 3 Pending -->
+<div class="flex items-start gap-4 opacity-40">
+<div class="w-8 h-8 rounded-full border-2 border-outline text-outline flex items-center justify-center font-bold text-sm shrink-0">
+                        3
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">LANGKAH 3</span>
+<span class="font-body-md text-body-md">Riwayat Penjualan</span>
+</div>
+</div>
+<!-- Step 4 Pending -->
+<div class="flex items-start gap-4 opacity-40">
+<div class="w-8 h-8 rounded-full border-2 border-outline text-outline flex items-center justify-center font-bold text-sm shrink-0">
+                        4
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">LANGKAH 4</span>
+<span class="font-body-md text-body-md">Konfirmasi</span>
+</div>
+</div>
+</nav>
+<div class="mt-auto pt-8 border-t border-surface-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim overflow-hidden border-2 border-primary-fixed">
+<img alt="Avatar Bu Sari" class="w-full h-full object-cover" data-alt="A warm, professional portrait of an Indonesian middle-aged woman with a friendly smile, dressed in modern business casual attire. The background is a soft-focus clean kitchen environment with warm lighting, creating a nurturing and trustworthy brand persona. High-quality photography with soft skin tones and a clean, organic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB40-wiocxLX1az5YEbx64ODbpvddqNOlorQhlhuUckENZN5YM7phLtnRiud4M2hKZhO5hVCTrxtEKWcs5VGvfcd8SCvpuP7l_GZ2X3ph6U-gVnXOsG9xzAVtxQCweZgHo_BTwcBncnEGl9zYBa_x8jNGwWHjIxhLhkAj4eZDl5MmRtrQsrAA7cc6SkgCyqS07WLQ-21oFYExVQfRls5i7F24BUspsymC8XQET_gQ7ylLJyPPNQpwc3dqYZlhD0hiO1anQY13rYEsU"/>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-primary-fixed font-bold leading-tight">Bu Sari</p>
+<p class="font-body-sm text-body-sm text-surface-variant">Pemilik Warung</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Right Content: Canvas -->
+<section class="onboarding-canvas flex-1 p-8 md:p-12 bg-white overflow-y-auto max-h-[870px]">
+<!-- Step Content Header -->
+<div class="mb-10">
+<h2 class="font-h2 text-h2 text-primary mb-2">Tambahkan produk pertama</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Pilih produk yang paling sering Anda jual untuk melatih AI Prediksi kami.</p>
+</div>
+<!-- Product Grid / Content Area -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-card-gap mb-12">
+<!-- Manual Add Card -->
+<div class="p-6 border-2 border-dashed border-outline-variant rounded-xl flex flex-col items-center justify-center text-center hover:border-primary hover:bg-surface-container-low transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-[48px] text-outline group-hover:text-primary mb-4">add_circle</span>
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Tambah Manual</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Masukkan nama, harga, dan stok sendiri.</p>
+</div>
+<!-- Sample Product 1 -->
+<div class="p-4 border border-outline-variant rounded-xl bg-white flex flex-col gap-3 group relative hover:border-tertiary transition-all">
+<div class="absolute top-3 right-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="h-32 rounded-lg bg-surface-container overflow-hidden">
+<img alt="Beras" class="w-full h-full object-cover" data-alt="A professional, clean studio photograph of high-quality organic white rice in a rustic burlap sack. The lighting is bright and natural, reflecting a premium matcha packaging aesthetic. The composition is minimalist, highlighting the texture of the grains against a soft warm grey background, evoking a sense of grounded, local craft quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfXM9B-K1GFzVVnnZyhHTUfv9RvOfdmpmW98mXqAeFcIL7pPTelSY9358Ms73QMNUJ5udvPYQgR_g3TjrtbsXcVyPgrhusV3urDSzkPao2VH_74dc3nlqgfZQRfCf_v9YmIYoBenFctmcz_-qx8wM5_qX-zcQc7k1-ID60XELdOC3SdDqNgEiu8E3Vyh9xsccDVIFqjjyjB6vabBfiVDbTm4PoFPKCjEKXR_GL2a4OzY6sg3mPreNAuu7QD7vw7STJh7CDiXyR5x4"/>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Beras Premium</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kebutuhan Pokok</p>
+<div class="mt-2 flex justify-between items-center">
+<span class="font-body-md text-body-md text-primary font-bold">Rp 14.500/kg</span>
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-fixed-variant text-[10px] font-bold rounded uppercase">Terpilih</span>
+</div>
+</div>
+</div>
+<!-- Sample Product 2 -->
+<div class="p-4 border border-outline-variant rounded-xl bg-white flex flex-col gap-3 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-pointer">
+<div class="h-32 rounded-lg bg-surface-container overflow-hidden">
+<img alt="Gula" class="w-full h-full object-cover" data-alt="Close-up of premium granulated white sugar poured into a small minimalist ceramic bowl. The lighting is high-key and crisp, emphasizing the crystalline texture. The overall visual style is clean and modern, following the brand's nurturing and premium digital twin concept. Soft olive shadows create a gentle depth on the wooden surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtwj2xtBcSWm44600cvkZZiX0AZIF5BrS-h_tajLSWVjRSYC1TrcaAV1U-Rodt3UxpLueg7NKOdlySeMt2CnDqMVFgaD9dw_zL-bqTKJrPVkMpXRH1A0o6OHnqkSvwqx_3xXY-MvH8E12Ug03WVBnZxVbbT3wm-bi40OgLdz-99anKj9vb9vgtlB15LFqR6nbKDAJluyeKvOBK6etuB6ld-s9VBBvmUtS1pUu6jyEmTR5O8IxXJ7AtRDNyZl2gyi1_uBvUyl3bRhE"/>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Gula Pasir</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kebutuhan Pokok</p>
+<div class="mt-2">
+<span class="font-body-md text-body-md text-primary font-bold">Rp 16.000/kg</span>
+</div>
+</div>
+</div>
+<!-- Sample Product 3 -->
+<div class="p-4 border border-outline-variant rounded-xl bg-white flex flex-col gap-3 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-pointer">
+<div class="h-32 rounded-lg bg-surface-container overflow-hidden">
+<img alt="Minyak Goreng" class="w-full h-full object-cover" data-alt="A sleek glass bottle of golden liquid cooking oil captured in professional lifestyle lighting. The scene is bright and airy, suggesting a clean and organized shop environment. The bottle sits on a light wooden counter, perfectly aligned with the brand's tactile modernism and organic aesthetic. Soft natural light creates beautiful highlights on the glass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCth-GZlgkhB70G9PtHjupXFDNeUAYDbwlNlUa3pPJvUmTFlC6xqjtSmqnlRbqTy3SNxIv3AG0TekV2_GoowMUwiFEm1d43BaVdp_4VMGgO8XDD-3Fde4NELdwhEVHZ3OhdMZOGgL19V04IBuy92hKiK2-kb1EEcQwk3Ark1YUkIlzOZCZjqdpQO2oWBjNv7NxrcLjhJrSgMhCIC8hYqcXPnmaazJOEIsNm79CwqeWSHGOfHRH6ITP2bjy8B9VlfAoiMsKgvKt4ssA"/>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Minyak Goreng</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kebutuhan Pokok</p>
+<div class="mt-2">
+<span class="font-body-md text-body-md text-primary font-bold">Rp 18.000/L</span>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Insight Mini Card -->
+<div class="bg-surface-container-low border-t-4 border-tertiary p-6 rounded-xl mb-12 flex gap-4 items-start">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<div>
+<h4 class="font-body-md text-body-md font-bold text-tertiary">Tips AI TokoQ</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Produk sembako seperti beras dan gula adalah pendorong utama loyalitas pelanggan UMKM. Masukkan data ini terlebih dahulu agar AI kami bisa memberikan prediksi stok yang akurat.</p>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="onboarding-actions flex justify-between items-center pt-8 border-t border-outline-variant">
+<button class="flex items-center gap-2 px-6 py-3 font-bold text-secondary hover:bg-surface-variant/20 rounded-xl transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Sebelumnya
+                </button>
+<button class="flex items-center gap-2 px-8 py-3 bg-primary text-white font-bold rounded-xl matcha-shadow hover:bg-primary-container active:scale-95 transition-all">
+                    Lanjutkan
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Background Decoration -->
+<div class="onboarding-decoration fixed bottom-0 right-0 p-12 opacity-10 pointer-events-none select-none">
+<span class="material-symbols-outlined text-[300px]">storefront</span>
+</div>
+<script src="../tokoq_design_system/responsive.js"></script>
+</body></html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="../tokoq_design_system/responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#b8cf8c",
+                    "tertiary-fixed": "#dae9ac",
+                    "surface-bright": "#f8fbea",
+                    "primary-fixed-dim": "#b8cf8c",
+                    "primary-fixed": "#d3eba6",
+                    "on-surface": "#191d13",
+                    "inverse-on-surface": "#f0f2e2",
+                    "surface-tint": "#51652e",
+                    "outline": "#75786b",
+                    "background": "#f8fbea",
+                    "surface-variant": "#e1e4d4",
+                    "on-secondary-container": "#596841",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#bccd9e",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2e3227",
+                    "secondary": "#55633d",
+                    "surface-dim": "#d9dccb",
+                    "secondary-fixed": "#d8e9b9",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e1e4d4",
+                    "on-tertiary-fixed": "#161f00",
+                    "primary-container": "#576b33",
+                    "surface-container-high": "#e7ead9",
+                    "on-background": "#191d13",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f2f5e4",
+                    "tertiary": "#445122",
+                    "secondary-container": "#d5e6b6",
+                    "on-primary-container": "#d3eba5",
+                    "tertiary-container": "#5c6938",
+                    "on-secondary-fixed": "#131f02",
+                    "outline-variant": "#c5c8b9",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#131f00",
+                    "on-secondary-fixed-variant": "#3d4b28",
+                    "surface": "#f8fbea",
+                    "tertiary-fixed-dim": "#becd92",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#d9e8aa",
+                    "on-surface-variant": "#45483d",
+                    "surface-container": "#edefdf",
+                    "on-primary": "#ffffff",
+                    "primary": "#40521d",
+                    "on-primary-fixed-variant": "#3a4d18",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#3f4b1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding": "32px",
+                    "section-margin": "48px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "card-gap": "24px"
+            },
+            "fontFamily": {},
+            "fontSize": {
+                    "h2-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "h1-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .a4-preview {
+            aspect-ratio: 1 / 1.414;
+            box-shadow: 0 10px 25px -5px rgba(73, 89, 42, 0.15);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d5e6b6;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="app-shell bg-background text-on-background font-body-md min-h-screen">
+<!-- SideNavBar Shell -->
+<aside class="app-sidebar bg-inverse-surface dark:bg-inverse-surface h-screen w-64 fixed left-0 top-0 shadow-md shadow-[#49592A]/10 flex flex-col h-full py-8 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="font-h2 text-h2 font-bold text-primary-fixed dark:text-primary-fixed-dim">TokoQ</h1>
+<p class="text-surface-variant font-body-sm opacity-70">Manajemen UMKM</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">point_of_sale</span>
+<span>Kasir POS</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span>Penjualan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>Inventori</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span>Prediksi AI</span>
+</a>
+<!-- ACTIVE STATE: Laporan -->
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-xl border-l-4 border-primary-fixed active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-bold">Laporan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Pengaturan</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2 pt-6 border-t border-outline/20">
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-bold py-3 rounded-xl mb-4 hover:opacity-90 transition-opacity">Upgrade Plan</button>
+<a class="flex items-center gap-3 px-4 py-2 text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-body-sm">Bantuan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-error-container hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-body-sm">Keluar</span>
+</a>
+</div>
+</aside>
+<div class="app-sidebar-overlay lg:hidden" data-sidebar-overlay></div>
+<!-- Main Content Area -->
+<main class="app-main ml-64 min-h-screen">
+<!-- TopNavBar Shell -->
+<header class="app-header h-20 w-full sticky top-0 z-40 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline flex justify-between items-center px-container-padding">
+<div class="app-header-left flex items-center gap-6">
+<button aria-label="Buka menu" class="mobile-nav-trigger lg:hidden" data-sidebar-toggle="" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="font-h3 text-h3 font-bold text-primary dark:text-primary-fixed-dim">Laporan Bisnis</h2>
+<div class="app-header-tabs hidden md:flex gap-4">
+<span class="text-primary font-bold border-b-2 border-primary pb-1 cursor-pointer">Ringkasan</span>
+<span class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer">Riwayat</span>
+</div>
+</div>
+<div class="app-header-right flex items-center gap-6">
+<div class="app-header-actions flex gap-4 items-center">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">settings</span>
+</div>
+<div class="h-10 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-3">
+<div class="app-user-copy text-right">
+<p class="font-bold text-body-sm text-on-surface">Bu Sari</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Owner</p>
+</div>
+<img alt="Avatar Bu Sari" class="w-10 h-10 rounded-full object-cover border-2 border-primary-fixed" data-alt="A professional and warm portrait of an Indonesian woman in her late 40s, wearing a modest and elegant hijab. The lighting is soft and natural, suggesting a bright morning in a clean, modern office environment. She has a friendly, nurturing expression that reflects her role as a successful MSME business owner. The background is slightly blurred, focusing on her grounded and premium presence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7IHjyxkJ9bygBUb95BJN2Cnrx6gK1orkwzkGnWyYbrhINBO2_SWsEOvKh5J4UA9mshPcWD5fllHkNHM29BVPEGCIKMrLxOd8XDe3kzVrSnbjKIuPWv0vS3oZykoUSckxiEtfdvdc0g1shbrT27vwjb3Ycb_Fnn-H9K8bogaZ4e7fRuVasZ1tjRerPSNw7bEXbmoXLvCoWBlmtD-I7qKKlTRN0dawoxRWPTLmYupGTFLJfMDDLFAmwMed-K3eka7eGHE8cXRKT8lY"/>
+</div>
+<button class="app-header-cta bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:opacity-90 active:opacity-80 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">point_of_sale</span>
+                    Buka Kasir
+                </button>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="app-page p-container-padding grid grid-cols-12 gap-gutter">
+<!-- Left Side: Report Configuration & Preview -->
+<div class="col-span-12 lg:col-span-8 space-y-gutter">
+<!-- Report Type Selection & Filters -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-sm">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+<div>
+<h3 class="font-h3 text-h3 text-on-surface">Konfigurasi Laporan</h3>
+<p class="text-on-surface-variant text-body-sm">Pilih jenis data dan periode yang ingin dianalisis</p>
+</div>
+<div class="table-responsive flex bg-surface-container rounded-xl p-1 border border-outline-variant">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg font-bold text-body-sm transition-all">Harian</button>
+<button class="px-4 py-2 text-on-surface-variant hover:text-primary transition-colors text-body-sm">Mingguan</button>
+<button class="px-4 py-2 text-on-surface-variant hover:text-primary transition-colors text-body-sm">Bulanan</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Card: Sales -->
+<div class="p-4 rounded-xl border-2 border-primary-container bg-surface-container-low flex flex-col items-center text-center cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-bold text-body-sm text-primary">Penjualan</span>
+</div>
+<!-- Card: Stock -->
+<div class="p-4 rounded-xl border border-outline-variant bg-surface-container-lowest flex flex-col items-center text-center cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mb-2">inventory_2</span>
+<span class="font-medium text-body-sm text-on-surface-variant">Stok Barang</span>
+</div>
+<!-- Card: Profit -->
+<div class="p-4 rounded-xl border border-outline-variant bg-surface-container-lowest flex flex-col items-center text-center cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mb-2">payments</span>
+<span class="font-medium text-body-sm text-on-surface-variant">Laba Rugi</span>
+</div>
+<!-- Card: Best Sellers -->
+<div class="p-4 rounded-xl border border-outline-variant bg-surface-container-lowest flex flex-col items-center text-center cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mb-2">trending_up</span>
+<span class="font-medium text-body-sm text-on-surface-variant">Terlaris</span>
+</div>
+</div>
+<div class="mt-8 flex flex-col md:flex-row gap-4 items-end">
+<div class="flex-1 w-full">
+<label class="block text-secondary text-label-caps mb-2">Rentang Tanggal</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">calendar_month</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-body-sm" type="text" value="01 Jan 2024 - 07 Jan 2024"/>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined">refresh</span>
+                            Terapkan
+                        </button>
+</div>
+</div>
+<!-- Preview Section Summary -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-card-gap">
+<!-- Omzet -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant border-t-4 border-t-primary-container relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5">
+<span class="material-symbols-outlined text-8xl">payments</span>
+</div>
+<p class="text-on-surface-variant text-label-caps mb-2">TOTAL OMZET</p>
+<h4 class="text-h3 font-bold text-on-surface">Rp 12.450.000</h4>
+<div class="mt-4 flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-body-sm font-bold">+12.5%</span>
+<span class="text-[12px] text-on-surface-variant ml-1">vs bln lalu</span>
+</div>
+</div>
+<!-- Transaksi -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant border-t-4 border-t-primary-container relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5">
+<span class="material-symbols-outlined text-8xl">shopping_bag</span>
+</div>
+<p class="text-on-surface-variant text-label-caps mb-2">TRANSAKSI</p>
+<h4 class="text-h3 font-bold text-on-surface">428 Nota</h4>
+<div class="mt-4 flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-body-sm font-bold">+5.2%</span>
+<span class="text-[12px] text-on-surface-variant ml-1">rata-rata harian</span>
+</div>
+</div>
+<!-- Profit -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant border-t-4 border-t-primary-container relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5">
+<span class="material-symbols-outlined text-8xl">savings</span>
+</div>
+<p class="text-on-surface-variant text-label-caps mb-2">ESTIMASI PROFIT</p>
+<h4 class="text-h3 font-bold text-on-surface">Rp 3.820.000</h4>
+<div class="mt-4 flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-body-sm font-bold">24% Margin</span>
+<span class="text-[12px] text-on-surface-variant ml-1">bersih</span>
+</div>
+</div>
+</div>
+<!-- Export Actions -->
+<div class="bg-surface-container-high p-6 rounded-2xl border border-outline-variant flex flex-wrap items-center justify-between gap-6">
+<div>
+<h4 class="font-bold text-on-surface">Ekspor Dokumen</h4>
+<p class="text-on-surface-variant text-body-sm">Pilih format untuk mengunduh laporan ini</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="bg-white border border-outline-variant text-secondary px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:bg-surface-container-lowest transition-colors active:scale-95">
+<span class="material-symbols-outlined text-red-600">picture_as_pdf</span>
+                            Unduh PDF
+                        </button>
+<button class="bg-white border border-outline-variant text-secondary px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:bg-surface-container-lowest transition-colors active:scale-95">
+<span class="material-symbols-outlined text-green-700">description</span>
+                            Ekspor Excel
+                        </button>
+<button class="bg-[#25D366] text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:opacity-90 transition-opacity active:scale-95">
+<span class="material-symbols-outlined">send</span>
+                            Kirim WhatsApp
+                        </button>
+</div>
+</div>
+<!-- Loading State (Simulated) -->
+<div class="flex items-center justify-center py-12 gap-3 text-on-surface-variant animate-pulse">
+<div class="w-6 h-6 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+<span class="font-medium italic">Sedang menyiapkan laporan...</span>
+</div>
+</div>
+<!-- Right Panel: Document Preview -->
+<div class="col-span-12 lg:col-span-4">
+<div class="app-sticky-panel sticky top-28">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-on-surface">Pratinjau Dokumen</h3>
+<span class="text-label-caps bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full uppercase">Draft</span>
+</div>
+<!-- Mini A4 Preview -->
+<div class="a4-preview bg-white rounded-lg p-8 flex flex-col border border-outline-variant overflow-hidden">
+<!-- Document Header -->
+<div class="flex justify-between items-start border-b-2 border-primary-container pb-6 mb-6">
+<div>
+<h1 class="font-h3 text-h3 text-primary mb-1">TokoQ</h1>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Laporan Penjualan Mingguan</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-on-surface">PERIODE</p>
+<p class="text-[10px] text-on-surface-variant">01 Jan - 07 Jan 2024</p>
+</div>
+</div>
+<!-- Document Body -->
+<div class="space-y-6 flex-1">
+<div class="bg-surface-container p-4 rounded-lg">
+<h5 class="text-[12px] font-bold text-on-surface mb-3 uppercase tracking-tighter">Ringkasan Eksekutif</h5>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-[10px] text-on-surface-variant">Omzet Bruto</p>
+<p class="text-[12px] font-bold text-on-surface">Rp 12.450.000</p>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant">Diskon/Promo</p>
+<p class="text-[12px] font-bold text-error">Rp 340.000</p>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant">Pajak (11%)</p>
+<p class="text-[12px] font-bold text-on-surface">Rp 1.369.500</p>
+</div>
+<div class="border-t border-outline-variant pt-1 mt-1">
+<p class="text-[10px] font-bold text-primary">OMZET NETO</p>
+<p class="text-[12px] font-bold text-primary">Rp 10.740.500</p>
+</div>
+</div>
+</div>
+<div>
+<h5 class="text-[12px] font-bold text-on-surface mb-3 uppercase tracking-tighter">Produk Terlaris</h5>
+<table class="w-full text-[10px] leading-relaxed">
+<thead>
+<tr class="bg-surface-container-high border-b border-outline-variant">
+<th class="text-left p-2">NAMA BARANG</th>
+<th class="text-right p-2">QTY</th>
+<th class="text-right p-2">SUBTOTAL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-outline-variant/30">
+<td class="p-2">Kopi Susu Aren Gede</td>
+<td class="p-2 text-right">84</td>
+<td class="p-2 text-right">Rp 1.680k</td>
+</tr>
+<tr class="border-b border-outline-variant/30">
+<td class="p-2">Indomie Goreng Jumbo</td>
+<td class="p-2 text-right">56</td>
+<td class="p-2 text-right">Rp 560k</td>
+</tr>
+<tr class="border-b border-outline-variant/30">
+<td class="p-2">Teh Manis Dingin</td>
+<td class="p-2 text-right">120</td>
+<td class="p-2 text-right">Rp 600k</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Document Footer -->
+<div class="mt-8 pt-4 border-t border-outline-variant flex justify-between items-end opacity-50">
+<div>
+<p class="text-[8px]">Dicetak secara otomatis oleh sistem TokoQ</p>
+<p class="text-[8px]">Waktu: 08 Jan 2024, 09:12 WIB</p>
+</div>
+<div class="flex items-center gap-1">
+<img alt="QR Verification" class="w-10 h-10 grayscale opacity-30" data-alt="A clean, minimalist QR code graphic used for digital document verification. The style is strictly monochromatic, following a paper-and-ink aesthetic. It is positioned as a functional element on a professional business report, reflecting a modern and secure digital management system for MSMEs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCphHkj9hepOr_-W1S7-Qq-EwcrxJ16Qp_0etm94absRZict41XUrBIZbA0aQo9bBJhRzSngQW4Ko8Gj1hi0y0qZ5s6Y49LYSIgFFUfh7ONm9BxtsQDZZwTRG_WGHwrTRuJtzwhJY2m0KN9n83IvdrhGSZnhWY-V5iWBWKCxxguQ3uOKp5PfZFxiDuFeWVcQ9r6c-GaQY_Pi5FJet-NlBBimny1MAbLCvFEYwlSpEUZ8cZdGL-7j0stX0KEXqjP-s8t5isn89NkWM4"/>
+</div>
+</div>
+</div>
+<p class="mt-4 text-center text-on-surface-variant text-body-sm italic">
+                        "Data laporan ini dihitung berdasarkan transaksi kasir yang telah tervalidasi."
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB for quick action (as per Contextual FAB Suppression logic, this is suppressed on Laporan screen, but kept here as an empty space or alternative if needed by layout) -->
+<script src="../tokoq_design_system/responsive.js"></script>
+</body></html>

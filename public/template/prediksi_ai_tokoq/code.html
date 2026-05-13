@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="../tokoq_design_system/responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#b8cf8c",
+                    "tertiary-fixed": "#dae9ac",
+                    "surface-bright": "#f8fbea",
+                    "primary-fixed-dim": "#b8cf8c",
+                    "primary-fixed": "#d3eba6",
+                    "on-surface": "#191d13",
+                    "inverse-on-surface": "#f0f2e2",
+                    "surface-tint": "#51652e",
+                    "outline": "#75786b",
+                    "background": "#f8fbea",
+                    "surface-variant": "#e1e4d4",
+                    "on-secondary-container": "#596841",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#bccd9e",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2e3227",
+                    "secondary": "#55633d",
+                    "surface-dim": "#d9dccb",
+                    "secondary-fixed": "#d8e9b9",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e1e4d4",
+                    "on-tertiary-fixed": "#161f00",
+                    "primary-container": "#576b33",
+                    "surface-container-high": "#e7ead9",
+                    "on-background": "#191d13",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f2f5e4",
+                    "tertiary": "#445122",
+                    "secondary-container": "#d5e6b6",
+                    "on-primary-container": "#d3eba5",
+                    "tertiary-container": "#5c6938",
+                    "on-secondary-fixed": "#131f02",
+                    "outline-variant": "#c5c8b9",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#131f00",
+                    "on-secondary-fixed-variant": "#3d4b28",
+                    "surface": "#f8fbea",
+                    "tertiary-fixed-dim": "#becd92",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#d9e8aa",
+                    "on-surface-variant": "#45483d",
+                    "surface-container": "#edefdf",
+                    "on-primary": "#ffffff",
+                    "primary": "#40521d",
+                    "on-primary-fixed-variant": "#3a4d18",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#3f4b1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding": "32px",
+                    "section-margin": "48px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "card-gap": "24px"
+            },
+            "fontSize": {
+                    "h2-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "h1-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #f8fbea; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ai-card-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f2f5e4 100%);
+        }
+        .graph-dashed { stroke-dasharray: 8; }
+    </style>
+</head>
+<body class="app-shell font-body-md text-on-surface">
+<!-- Sidebar Navigation -->
+<aside class="app-sidebar bg-inverse-surface h-screen w-64 fixed left-0 top-0 flex flex-col py-8 px-4 shadow-md shadow-[#49592A]/10 z-50">
+<div class="mb-10 px-4">
+<h1 class="font-h2 text-h2 font-bold text-primary-fixed">TokoQ</h1>
+<p class="text-body-sm text-surface-variant/70">Manajemen UMKM</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">point_of_sale</span>
+<span>Kasir POS</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span>Penjualan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>Inventori</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-xl border-l-4 border-primary-fixed" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span>Prediksi AI</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+<span>Laporan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim hover:bg-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Pengaturan</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 space-y-2 border-t border-outline-variant/20">
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Bantuan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-surface-variant hover:text-primary-fixed-dim" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Keluar</span>
+</a>
+</div>
+</aside>
+<div class="app-sidebar-overlay lg:hidden" data-sidebar-overlay></div>
+<!-- Main Content Shell -->
+<main class="app-main ml-64 min-h-screen">
+<!-- Top Navigation -->
+<header class="app-header h-20 w-full sticky top-0 z-40 bg-surface border-b border-outline-variant flex justify-between items-center px-container-padding">
+<div class="app-header-left flex items-center gap-4">
+<button aria-label="Buka menu" class="mobile-nav-trigger lg:hidden" data-sidebar-toggle="" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="font-h3 text-h3 font-bold text-primary">Prediksi AI</h2>
+<div class="app-header-tabs h-6 w-[1px] bg-outline-variant"></div>
+<span class="app-header-tabs text-on-surface-variant font-medium">AI Insight Sederhana</span>
+</div>
+<div class="app-header-right flex items-center gap-6">
+<div class="app-header-actions flex gap-4 items-center">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">settings</span>
+</div>
+<div class="flex items-center gap-3 border-l pl-6 border-outline-variant">
+<div class="app-user-copy text-right">
+<p class="font-bold text-body-sm leading-none">Bu Sari</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold">Owner</p>
+</div>
+<img alt="Avatar Bu Sari" class="w-10 h-10 rounded-full object-cover border-2 border-primary-fixed" data-alt="A professional and friendly close-up portrait of a middle-aged Indonesian woman business owner in a clean modern environment. The lighting is soft and natural, emphasizing her warm smile and trustworthy demeanor. The background is slightly blurred with hints of a contemporary retail shop interior using the brand's soft olive and white color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp0AAj8thBNAz2kqa13TR8iI8gOhl_iUsMcjsHEwFC7N_EhCxU2s6_0x30f6WW5RBZKJwGH_-pZ5tkaUz1ow7iLvYK_Pre-2tBhFQz_oClI_SCKjJc7lSXf6s6vgl0mtOWvih8rfTrBzWayxEbECtztOWzV8K-cEbsvmU6VDvxPzDvM7gw4KPFxXtuE8V7EzshcijiVcQGYlt0sx7BhJuQN0rso2U1rR1RtFOvNcK9Zk38paK5PMrUJpBzJMoogiTK5DNf-6tFJ54"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="app-page p-container-padding space-y-card-gap max-w-[1400px]">
+<!-- Hero Bento Grid -->
+<div class="grid grid-cols-12 gap-card-gap">
+<!-- Main Prediction Card -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-[24px] p-8 shadow-md shadow-[#49592A]/10 border border-outline-variant relative overflow-hidden ai-card-gradient">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="flex justify-between items-start mb-8">
+<div>
+<p class="text-label-caps text-secondary font-bold uppercase mb-1">Estimasi Pendapatan</p>
+<h3 class="font-h2 text-h2 text-on-surface">Prediksi Omzet Besok</h3>
+</div>
+<div class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-body-sm font-bold">86% Confidence</span>
+</div>
+</div>
+<div class="flex items-baseline gap-4 mb-10">
+<span class="font-h1 text-h1 text-primary">Rp 1.520.000</span>
+<span class="text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+                            +12% vs Kemarin
+                        </span>
+</div>
+<!-- Prediction Graph Placeholder -->
+<div class="w-full h-64 bg-surface-container-low rounded-xl p-4 flex flex-col justify-end relative">
+<div class="absolute inset-x-8 bottom-8 h-40 flex items-end gap-2">
+<!-- Historical Data (Mockup Bars/Lines) -->
+<div class="flex-1 bg-outline-variant/30 h-[60%] rounded-t-md"></div>
+<div class="flex-1 bg-outline-variant/30 h-[75%] rounded-t-md"></div>
+<div class="flex-1 bg-outline-variant/30 h-[65%] rounded-t-md"></div>
+<div class="flex-1 bg-outline-variant/30 h-[85%] rounded-t-md"></div>
+<div class="flex-1 bg-outline-variant/30 h-[70%] rounded-t-md"></div>
+<div class="flex-1 bg-outline-variant/30 h-[90%] rounded-t-md border-r-2 border-dashed border-primary"></div>
+<!-- Prediction Area -->
+<div class="flex-1 bg-primary/20 h-[95%] rounded-t-md border-t-2 border-primary border-dashed"></div>
+<div class="flex-1 bg-primary/10 h-[80%] rounded-t-md border-t-2 border-primary/40 border-dashed"></div>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-bold uppercase mt-4 px-4">
+<span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab (Hari ini)</span><span class="text-primary">Ming (Besok)</span><span>Sen</span>
+</div>
+</div>
+</div>
+<!-- Stock-out Risks -->
+<div class="col-span-12 lg:col-span-4 space-y-card-gap">
+<div class="bg-surface-container-lowest rounded-[24px] p-6 shadow-md shadow-[#49592A]/10 border border-outline-variant">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+<h4 class="font-h3 text-h3 text-on-surface">Risiko Stok Habis</h4>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-error-container/30 rounded-xl border border-error/10 flex justify-between items-center">
+<div>
+<p class="font-bold text-on-surface">Beras Premium 5kg</p>
+<p class="text-body-sm text-error">Habis dalam 3 hari</p>
+</div>
+<span class="material-symbols-outlined text-error">notification_important</span>
+</div>
+<div class="p-4 bg-error-container/10 rounded-xl border border-error/5 flex justify-between items-center opacity-80">
+<div>
+<p class="font-bold text-on-surface">Minyak Goreng 2L</p>
+<p class="text-body-sm text-on-surface-variant">Habis dalam 4 hari</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">schedule</span>
+</div>
+</div>
+</div>
+<!-- Recommended Action Quick Card -->
+<div class="bg-primary text-on-primary rounded-[24px] p-6 shadow-xl shadow-primary/20 relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-label-caps text-primary-fixed-dim uppercase mb-2">Saran Tindakan AI</p>
+<p class="font-h3 text-h3 mb-4">Restock beras before Friday</p>
+<button class="bg-primary-fixed text-primary px-6 py-2 rounded-full font-bold text-body-sm hover:scale-105 transition-transform active:scale-95">
+                                Pesan Sekarang
+                            </button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-6 -right-6 text-[120px] opacity-10">inventory</span>
+</div>
+</div>
+</div>
+<!-- Bottom Section Grid -->
+<div class="grid grid-cols-12 gap-card-gap">
+<!-- Predicted Popular Products -->
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container-lowest rounded-[24px] p-6 border border-outline-variant shadow-md shadow-[#49592A]/10">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-h3 text-h3 text-on-surface">Produk Terpopuler</h4>
+<span class="material-symbols-outlined text-primary">auto_graph</span>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">icecream</span>
+</div>
+<div class="flex-1">
+<p class="font-bold">Es Krim Cokelat</p>
+<div class="w-full h-1.5 bg-surface-container rounded-full mt-1">
+<div class="w-[90%] h-full bg-primary rounded-full"></div>
+</div>
+</div>
+<span class="text-primary font-bold">+24%</span>
+</li>
+<li class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">local_drink</span>
+</div>
+<div class="flex-1">
+<p class="font-bold">Air Mineral 600ml</p>
+<div class="w-full h-1.5 bg-surface-container rounded-full mt-1">
+<div class="w-[75%] h-full bg-primary rounded-full"></div>
+</div>
+</div>
+<span class="text-primary font-bold">+18%</span>
+</li>
+<li class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">bakery_dining</span>
+</div>
+<div class="flex-1">
+<p class="font-bold">Roti Tawar Serbaguna</p>
+<div class="w-full h-1.5 bg-surface-container rounded-full mt-1">
+<div class="w-[60%] h-full bg-primary rounded-full"></div>
+</div>
+</div>
+<span class="text-primary font-bold">+12%</span>
+</li>
+</ul>
+</div>
+<!-- Shopping List Recommendation -->
+<div class="col-span-12 md:col-span-6 lg:col-span-5 bg-surface-container-lowest rounded-[24px] p-6 border border-outline-variant shadow-md shadow-[#49592A]/10 flex flex-col">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 bg-tertiary-container rounded-full flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined">shopping_basket</span>
+</div>
+<h4 class="font-h3 text-h3 text-on-surface">Daftar Belanja Rekomendasi</h4>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex items-center gap-3 p-3 hover:bg-surface-container rounded-xl transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary">check_box_outline_blank</span>
+<span class="flex-1 font-medium">Beras Premium SLYP (20 karung)</span>
+<span class="text-body-sm text-on-surface-variant">Rp 1.450.000</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-surface-container rounded-xl transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary">check_box_outline_blank</span>
+<span class="flex-1 font-medium">Minyak Goreng Sawit (5 dus)</span>
+<span class="text-body-sm text-on-surface-variant">Rp 820.000</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-surface-container rounded-xl transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary">check_box_outline_blank</span>
+<span class="flex-1 font-medium">Gula Pasir 1kg (50 bungkus)</span>
+<span class="text-body-sm text-on-surface-variant">Rp 750.000</span>
+</div>
+</div>
+<button class="mt-6 w-full py-4 bg-secondary text-on-secondary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-secondary/90 transition-colors">
+                        Buat Pesanan Otomatis
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Strategic Promo Suggestions -->
+<div class="col-span-12 lg:col-span-3 bg-tertiary-container rounded-[24px] p-6 text-on-tertiary-container flex flex-col justify-between border border-tertiary/20">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined">celebration</span>
+<p class="text-label-caps uppercase font-bold">Ide Promo Cerdas</p>
+</div>
+<p class="font-h3 text-h3 mb-2 leading-tight">Promo Bundling</p>
+<p class="text-body-sm opacity-90 mb-6">"Roti Tawar + Selai Cokelat" diperkirakan laku keras di hari Minggu pagi.</p>
+</div>
+<div class="bg-white/20 backdrop-blur-md rounded-xl p-4 border border-white/30">
+<p class="text-[10px] uppercase font-bold mb-1 opacity-70">Potensi Margin</p>
+<p class="text-h3 font-bold text-on-tertiary-container">+15% Profit</p>
+<a class="inline-flex items-center gap-1 text-body-sm font-bold mt-2 underline" href="#">Terapkan Promo</a>
+</div>
+</div>
+</div>
+<!-- AI Insight Summary Footer -->
+<footer class="bg-white/50 border border-outline-variant rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-white text-[32px]" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="flex-1">
+<h5 class="font-bold text-on-surface mb-1">Analisis Sistem TokoQ</h5>
+<p class="text-body-sm text-on-surface-variant">Berdasarkan data 30 hari terakhir, tokomu menunjukkan tren pertumbuhan positif di kategori sembako. Fokus pada ketersediaan stok di akhir pekan untuk memaksimalkan omzet.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2 rounded-full border border-outline text-secondary font-bold text-body-sm hover:bg-surface-variant/20">Lihat Detail Laporan</button>
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold text-body-sm shadow-lg shadow-primary/20">Upgrade Plan Pro</button>
+</div>
+</footer>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on this AI Detail Page as per instructions) -->
+<script src="../tokoq_design_system/responsive.js"></script>
+</body></html>
